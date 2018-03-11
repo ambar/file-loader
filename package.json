@@ -1,6 +1,6 @@
 {
   "name": "relative-file-loader",
-  "version": "1.1.11",
+  "version": "1.1.12",
   "author": "Tobias Koppers @sokra",
   "description": "file loader module for webpack",
   "license": "MIT",
