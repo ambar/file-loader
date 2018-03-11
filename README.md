@@ -17,7 +17,7 @@
 <h2 align="center">Install</h2>
 
 ```bash
-npm install --save-dev file-loader
+npm install --save-dev relative-file-loader
 ```
 
 <h2 align="center"><a href="https://webpack.js.org/concepts/loaders">Usage</a></h2>
@@ -38,7 +38,7 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            options: {}  
+            options: {}
           }
         ]
       }
@@ -50,7 +50,7 @@ module.exports = {
 Emits `file.png` as file in the output directory and returns the public URL
 
 ```
-"/public/path/0dcbbaa7013869e351f.png"
+"../path/0dcbbaa7013869e351f.png"
 ```
 
 <h2 align="center">Options</h2>
@@ -60,9 +60,8 @@ Emits `file.png` as file in the output directory and returns the public URL
 |**`name`**|`{String\|Function}`|`[hash].[ext]`|Configure a custom filename template for your file|
 |**`regExp`**|`{RegExp}`|`'undefined'`|Let you extract some parts of the file path to reuse them in the `name` property|
 |**`context`**|`{String}`|`this.options.context`|Configure a custom file context, defaults to `webpack.config.js` [context](https://webpack.js.org/configuration/entry-context/#context)|
-|**`publicPath`**|`{String\|Function}`|[`__webpack_public_path__ `](https://webpack.js.org/api/module-variables/#__webpack_public_path__-webpack-specific-)|Configure a custom `public` path for your file|
 |**`outputPath`**|`{String\|Function}`|`'undefined'`|Configure a custom `output` path for your file|
-|**`useRelativePath`**|`{Boolean}`|`false`|Should be `true` if you wish to generate a `context` relative URL for each file|
+|**`relative`**|`{Boolean}`|`true`|Should be `true` if you wish to generate a entry relative URL for each file|
 |**`emitFile`**|`{Boolean}`|`true`|By default a file is emitted, however this can be disabled if required (e.g. for server side packages)|
 
 ### `name`
@@ -77,7 +76,7 @@ You can configure a custom filename template for your file using the query param
   loader: 'file-loader',
   options: {
     name: '[path][name].[ext]'
-  }  
+  }
 }
 ```
 
@@ -95,7 +94,7 @@ You can configure a custom filename template for your file using the query param
 
       return '[hash].[ext]'
     }
-  }  
+  }
 }
 ```
 
@@ -114,7 +113,7 @@ import img from './customer01/file.png'
   options: {
     regExp: /\/([a-z0-9]+)\/[a-z0-9]+\.png$/,
     name: '[1]-[name].[ext]'
-  }  
+  }
 }
 ```
 
@@ -153,24 +152,11 @@ By default, the path and name you specify will output the file in that same dire
   options: {
     name: '[path][name].[ext]',
     context: ''
-  }  
+  }
 }
 ```
 
 You can specify custom `output` and `public` paths by using `outputPath`, `publicPath` and `useRelativePath`
-
-### `publicPath`
-
-**webpack.config.js**
-```js
-{
-  loader: 'file-loader',
-  options: {
-    name: '[path][name].[ext]',
-    publicPath: 'assets/'
-  }  
-}
-```
 
 ### `outputPath`
 
@@ -181,19 +167,19 @@ You can specify custom `output` and `public` paths by using `outputPath`, `publi
   options: {
     name: '[path][name].[ext]',
     outputPath: 'images/'
-  }  
+  }
 }
 ```
 
-### `useRelativePath`
+### `relative`
 
-`useRelativePath` should be `true` if you wish to generate a relative URL to the for each file context.
+`relative` should be `true` if you wish to generate a relative URL to the for each entry file.
 
 ```js
 {
   loader: 'file-loader',
   options: {
-    useRelativePath: process.env.NODE_ENV === "production"
+    relative: process.env.NODE_ENV === "production"
   }
 }
 ```
@@ -211,7 +197,7 @@ import img from './file.png'
   loader: 'file-loader',
   options: {
     emitFile: false
-  }  
+  }
 }
 ```
 
@@ -234,7 +220,7 @@ import png from 'image.png'
   loader: 'file-loader',
   options: {
     name: 'dirname/[hash].[ext]'
-  }  
+  }
 }
 ```
 
@@ -248,7 +234,7 @@ dirname/0dcbbaa701328ae351f.png
   loader: 'file-loader',
   options: {
     name: '[sha512:hash:base64:7].[ext]'
-  }  
+  }
 }
 ```
 
@@ -266,7 +252,7 @@ import png from 'path/to/file.png'
   loader: 'file-loader',
   options: {
     name: '[path][name].[ext]?[hash]'
-  }  
+  }
 }
 ```
 

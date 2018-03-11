@@ -4,13 +4,13 @@
 import webpack from '../helpers/compiler';
 
 describe('Options', () => {
-  describe('useRelativePath', () => {
+  describe('relative', () => {
     test('{Boolean} - `false`', async () => {
       const config = {
         loader: {
           test: /(png|jpg|svg)/,
           options: {
-            useRelativePath: false,
+            relative: false,
           },
         },
       };
@@ -26,7 +26,7 @@ describe('Options', () => {
         loader: {
           test: /(png|jpg|svg)/,
           options: {
-            useRelativePath: true,
+            relative: true,
           },
         },
       };
@@ -43,7 +43,7 @@ describe('Options', () => {
           test: /(png|jpg|svg)/,
           options: {
             context: './test/fixtures/nested/',
-            useRelativePath: true,
+            relative: true,
           },
         },
       };
@@ -60,7 +60,7 @@ describe('Options', () => {
           test: /(png|jpg|svg)/,
           options: {
             context: '../nested/',
-            useRelativePath: true,
+            relative: true,
           },
         },
       };

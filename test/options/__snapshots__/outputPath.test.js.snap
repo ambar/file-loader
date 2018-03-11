@@ -5,7 +5,7 @@ Object {
   "assets": Array [
     "output_path_func/9c87cbf3ba33126ffd25ae7f2f6bbafb.png",
   ],
-  "source": "module.exports = __webpack_public_path__ + \\"output_path_func/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
+  "source": "module.exports = \\"output_path_func/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
 }
 `;
 
@@ -14,7 +14,7 @@ Object {
   "assets": Array [
     "output_path_func/file.png",
   ],
-  "source": "module.exports = __webpack_public_path__ + \\"output_path_func/file.png\\";",
+  "source": "module.exports = \\"output_path_func/file.png\\";",
 }
 `;
 
@@ -23,7 +23,7 @@ Object {
   "assets": Array [
     "output_path_func/9c87cbf3ba33126ffd25ae7f2f6bbafb.png",
   ],
-  "source": "module.exports = \\"public_path_func/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
+  "source": "module.exports = \\"output_path_func/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
 }
 `;
 
@@ -32,7 +32,7 @@ Object {
   "assets": Array [
     "output_path_func/9c87cbf3ba33126ffd25ae7f2f6bbafb.png",
   ],
-  "source": "module.exports = \\"public_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
+  "source": "module.exports = \\"output_path_func/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
 }
 `;
 
@@ -41,7 +41,7 @@ Object {
   "assets": Array [
     "output_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png",
   ],
-  "source": "module.exports = __webpack_public_path__ + \\"output_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
+  "source": "module.exports = \\"output_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
 }
 `;
 
@@ -50,7 +50,7 @@ Object {
   "assets": Array [
     "output_path/file.png",
   ],
-  "source": "module.exports = __webpack_public_path__ + \\"output_path/file.png\\";",
+  "source": "module.exports = \\"output_path/file.png\\";",
 }
 `;
 
@@ -59,7 +59,7 @@ Object {
   "assets": Array [
     "output_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png",
   ],
-  "source": "module.exports = \\"public_path_func/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
+  "source": "module.exports = \\"output_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
 }
 `;
 
@@ -68,7 +68,7 @@ Object {
   "assets": Array [
     "output_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png",
   ],
-  "source": "module.exports = \\"public_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
+  "source": "module.exports = \\"output_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
 }
 `;
 
@@ -77,7 +77,7 @@ Object {
   "assets": Array [
     "output_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png",
   ],
-  "source": "module.exports = \\"public_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
+  "source": "module.exports = \\"output_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
 }
 `;
 
@@ -86,6 +86,6 @@ Object {
   "assets": Array [
     "output_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png",
   ],
-  "source": "module.exports = __webpack_public_path__ + \\"output_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
+  "source": "module.exports = \\"output_path/9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
 }
 `;

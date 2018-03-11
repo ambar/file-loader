@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Options relative {Boolean} - \`false\` 1`] = `
+Object {
+  "assets": Array [
+    "9c87cbf3ba33126ffd25ae7f2f6bbafb.png",
+  ],
+  "source": "module.exports = __webpack_public_path__ + \\"9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
+}
+`;
+
+exports[`Options relative {Boolean} - \`true\` 1`] = `
+Object {
+  "assets": Array [
+    "9c87cbf3ba33126ffd25ae7f2f6bbafb.png",
+  ],
+  "source": "module.exports = \\"../9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
+}
+`;
+
+exports[`Options relative {Boolean} - \`true\` with absolute \`context\` 1`] = `
+Object {
+  "assets": Array [
+    "9c87cbf3ba33126ffd25ae7f2f6bbafb.png",
+  ],
+  "source": "module.exports = \\"9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
+}
+`;
+
+exports[`Options relative {Boolean} - \`true\` with relative \`context\` 1`] = `
+Object {
+  "assets": Array [
+    "9c87cbf3ba33126ffd25ae7f2f6bbafb.png",
+  ],
+  "source": "module.exports = \\"9c87cbf3ba33126ffd25ae7f2f6bbafb.png\\";",
+}
+`;

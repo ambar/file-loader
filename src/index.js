@@ -31,41 +31,22 @@ export default function loader(content) {
     }
   }
 
-  if (options.useRelativePath) {
-    const filePath = this.resourcePath;
+  const issuerPath = options.context
+    ? context
+    : (
+      this._module &&
+      this._module.issuer &&
+      this._module.issuer.context
+    );
 
-    const issuer = options.context
-      ? context
-      : (
-        this._module &&
-        this._module.issuer &&
-        this._module.issuer.context
-      );
-
-    const relativeUrl = issuer && path.relative(issuer, filePath)
-      .split(path.sep)
-      .join('/');
-
-    const relativePath = relativeUrl && `${path.dirname(relativeUrl)}/`;
-    // eslint-disable-next-line no-bitwise
-    if (~relativePath.indexOf('../')) {
-      outputPath = path.posix.join(outputPath, relativePath, url);
-    } else {
-      outputPath = path.posix.join(relativePath, url);
-    }
-  }
 
   let publicPath = `__webpack_public_path__ + ${JSON.stringify(outputPath)}`;
 
-  if (options.publicPath) {
-    if (typeof options.publicPath === 'function') {
-      publicPath = options.publicPath(url);
-    } else if (options.publicPath.endsWith('/')) {
-      publicPath = options.publicPath + url;
-    } else {
-      publicPath = `${options.publicPath}/${url}`;
-    }
-
+  // use relative public path
+  if (options.relative === undefined || options.relative) {
+    publicPath = path.relative(issuerPath, path.resolve(context, outputPath))
+      .split(path.sep)
+      .join('/');
     publicPath = JSON.stringify(publicPath);
   }
 
